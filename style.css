@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* LIVE ROTATING ANIMATION */
+#bg-rotate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #00eaff, #005eff, #001133);
+    filter: blur(120px);
+    transform: translate(-50%, -50%);
+    animation: rotate 18s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NEON TEXT */
+.neon {
+    font-size: 38px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff, 0 0 25px #00eaff, 0 0 50px #00eaff;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+button {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background: #00eaff;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
